@@ -20,7 +20,7 @@ const Login = () => {
       })
   }
 
-  const {mutate, isLoading, isSuccess, isError } = useMutation((data) => 
+  const {mutate, isLoading, isSuccess, isError, error, data } = useMutation((data) => 
     handleLogin(data)
   )
 
@@ -32,6 +32,7 @@ const Login = () => {
     if (isError) {
       alert.error("Email ou password incorreto")
     }
+
   }, [isSuccess, isError, alert])
 
   function handleSubmit(e) {
