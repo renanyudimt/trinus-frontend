@@ -20,7 +20,7 @@ const Login = () => {
       })
   }
 
-  const {mutate, isLoading, isSuccess, isError, error, data } = useMutation((data) => 
+  const {mutate, isLoading, isSuccess, isError } = useMutation((data) => 
     handleLogin(data)
   )
 
